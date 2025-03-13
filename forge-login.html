@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forge UI Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #121826;
+            color: #ffffff;
+        }
+        .card {
+            background-color: #1f2937;
+            border: none;
+            color: #ffffff;
+        }
+        .btn-custom {
+            background-color: #10b981;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Forge</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Servers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sites</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Circles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Recipes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Docs</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container py-5">
+        <h3 class="text-success">&#10004; Great!</h3>
+        <p>Next, let's connect to a source control and server provider so Forge can create servers on your behalf.</p>
+        
+        <h4>Source Control</h4>
+        <p>Forge needs to know where to find your application's code. Connect with one of your preferred source control providers.</p>
+        <div class="row g-3">
+            <div class="col-md-6">
+                <div class="card p-3 text-center">
+                    <h5>&#128187; Connect to GitHub</h5>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card p-3 text-center">
+                    <h5>&#128187; Connect to GitLab</h5>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card p-3 text-center">
+                    <h5>&#128187; Connect to Bitbucket</h5>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card p-3 text-center">
+                    <h5>&#128187; Use a custom Git provider</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
