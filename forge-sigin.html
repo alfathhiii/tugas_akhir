@@ -64,25 +64,28 @@
     </div>
 
     <script>
-        (() => {
-            'use strict';
-            const form = document.querySelector('.needs-validation');
-            form.addEventListener('submit', event => {
-                if (!form.checkValidity()) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                }
-                form.classList.add('was-validated');
-                
-                const password = document.getElementById('password').value;
-                const confirmPassword = document.getElementById('confirmPassword');
-                if (password !== confirmPassword.value) {
-                    confirmPassword.setCustomValidity('Passwords do not match.');
-                } else {
-                    confirmPassword.setCustomValidity('');
-                }
-            }, false);
-        })();
-    </script>
+(() => {
+    'use strict';
+    const form = document.querySelector('.needs-validation');
+    form.addEventListener('submit', event => {
+        event.preventDefault();
+
+        if (!form.checkValidity()) {
+            event.stopPropagation();
+        } else {
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value;
+
+            if (email === 'admin@gmail.com' && password === 'admin123') {
+                window.location.href = 'forge-server.html';
+            } else {
+                alert('Email atau password salah.');
+            }
+        }
+
+        form.classList.add('was-validated');
+    }, false);
+})();
+</script>
 </body>
 </html>

@@ -66,7 +66,7 @@
     .dropdown-menu hr{
       color: white;
     }
-        .card-dark {
+    .card-dark {
       background-color: #1b2431;
       border: none;
       border-radius: 10px;
@@ -92,6 +92,9 @@
       width: max-content;
       transition: border 0.3s;
     }
+    .card-account{
+        padding: 30px;
+    }
   </style>
 </head>
 <body class="">
@@ -115,19 +118,19 @@
       <div class="nav-center">
         <ul class="navbar-nav flex-row gap-3">
           <li class="nav-item">
-            <a class="nav-link text-secondary active" href="forge-server.html">Servers</a>
+            <a class="nav-link text-secondary" href="#">Servers</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-secondary" href="404-notfound.html">Sites</a>
+            <a class="nav-link text-secondary" href="#">Sites</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-secondary" href="circels-forge.html">Circles</a>
+            <a class="nav-link text-secondary" href="#">Circles</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-secondary" href="404-notfound.html">Recipes</a>
+            <a class="nav-link text-secondary" href="#">Recipes</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-secondary" href="404-notfound.html">Docs</a>
+            <a class="nav-link text-secondary" href="#">Docs</a>
           </li>
         </ul>
       </div>
@@ -142,9 +145,9 @@
           <li><a class="dropdown-item text-light" href="circels-forge.html">Circles</a></li>
           <li><a class="dropdown-item text-light" href="billing-forge.html">Billing</a></li>
           <hr>
-          <li><a class="dropdown-item text-light" href="404-notfound.html">Documentation</a></li>
-          <li><a class="dropdown-item text-light" href="404-notfound.html">Vidio Tutorials</a></li>
-          <li><a class="dropdown-item text-light" href="404-notfound.html">Blog</a></li>
+          <li><a class="dropdown-item text-light" href="#">Documentation</a></li>
+          <li><a class="dropdown-item text-light" href="#">Vidio Tutorials</a></li>
+          <li><a class="dropdown-item text-light" href="#">Blog</a></li>
           <hr>
           <li><a class="dropdown-item text-light" href="forge-intro.html">Logout</a></li>
         </ul>
@@ -152,48 +155,40 @@
 
     </div>
   </div>
-  <div class="flex justify-between">
-      <div class="container py-5">
+  <div class="container py-5">
     <div class="d-flex justify-content-between align-items-center mb-4">
-      <h2 class="fw-semibold">Servers</h2>
+      <h2 class="fw-semibold">Account Settings</h2>
     </div>
-
-    <div class="d-flex justify-content-between align-items-center gap-3 mb-4">
-      <div class="d-flex gap-3">
-        <select class="form-select w-auto bg-dark text-white border-0">
-          <option><a href="">All Servers</a></option>
-          <option><a href="">Owned servers</a></option>
-          <option><a href="">Untangged servers</a></option>
-        </select>
-              <form class="input-group search-group">
-        <span class="input-group-text">
-          <i class="bi bi-search"></i>
-        </span>
-        <input type="text" class="form-control" placeholder="filter..." aria-label="Search">
-      </form>
-      </div>
-      <div class="d-flex align-items-center gap-2">
-        <button class="btn btn-dark-outline"><i class="bi bi-grid-3x3-gap"></i></button>
-        <button class="btn btn-dark-outline"><i class="bi bi-list"></i></button>
-        <button class="btn btn-dark-outline d-flex align-items-center">
-          <i class="bi bi-hdd me-2"></i> Create Server
-        </button>
-      </div>
-    </div>
-
-    <div class="card card-dark p-5 text-center mb-4 align-items-center">
-      <img src="server_forge.png" alt="" style="height: 100px;width: 140px;">
-      <h5 class="fw-normal text-light">There are no active servers associated with your account.</h5>
-      <p class="text-secondary mt-2">
-        To get started managing servers using Laravel Forge, 
-        <a href="#" class="text-success fw-semibold free-trial">start a free trial</a> 
-        on one of our
-        <br>
-       affordable billing plans.
-      </p>
-    </div>
-  </div>
-  </div>
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="col-md-3 sidebar">
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Authentication</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">SSH Keys</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Server Providers</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Source Control</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">API Tokens</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Envoyer</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Sentry</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Aikido</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Server Archive</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">Tags</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Billing</a></li>
+                </ul>
+            </div>
+            <div class="col-md-9">
+                <div class="card-dark mb-4 card-account">
+                    <h5 class="card-title">New API Token</h5>
+                    <div class="alert alert-secondary text-light bg-secondary bg-opacity-25 border-0 small">
+                        <i class="bi bi-exclamation-circle text-secondary me-2"></i>
+                        You're not currently subscribed to Forge. 
+                        <a href="#" class="text-success free-trial">Choose a plan to get started</a>.
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

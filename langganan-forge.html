@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+     body {
+      background-color: #0e1320;
+      color: #cfd3dc;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .search-group {
+      border: 2px solid transparent;
+      border-radius: 5px;
+      width: max-content;
+      transition: border 0.3s;
+    }
+
+    .search-group:hover,
+    .search-group:focus-within {
+      border-color: #198754;
+    }
+
+    .search-group .form-control,
+    .search-group .input-group-text {
+      border: none;
+      background-color: #343a40;
+      color: white;
+      outline: none;
+    }
+
+    .search-group .form-control:focus {
+      box-shadow: none;
+    }
+
+    .search-group .form-control::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .nav-center {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container-narrow {
+      max-width: 1620px;
+      margin: 0 auto;
+    }
+
+    .nav-link.active {
+      color: #198754 !important;
+      background-color: rgba(25, 135, 84, 0.05);
+      border-radius: 0.25rem;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+
+    .dropdown-menu .dropdown-item:hover {
+      background-color: #2a2f33;
+      color: #fff;
+    }
+    .dropdown-menu hr{
+      color: white;
+    }
+    .card-dark {
+      background-color: #1b2431;
+      border: none;
+      border-radius: 10px;
+    }
+    .btn-dark-outline {
+      background-color: #2a2f3a;
+      color: #cfd3dc;
+      border: none;
+    }
+    .btn-dark-outline:hover {
+      background-color: #3a404f;
+    }
+    .icon-placeholder {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    .free-trial{
+      text-decoration: none;
+    }
+     .search-group {
+      border: 2px solid transparent;
+      border-radius: 5px;
+      width: max-content;
+      transition: border 0.3s;
+    }
+    .card-account{
+        padding: 30px;
+    }
+        ul.check {
+      list-style: none; /* hilangkan bullet default */
+      padding-left: 0;
+    }
+
+    ul.check li {
+      position: relative;
+      padding-left: 30px; /* beri ruang untuk gambar */
+    }
+
+    ul.check li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 5px;
+      width: 20px;   /* ukuran gambar */
+      height: 20px;
+      background-image: url("centang.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    
+    ul.noncheck {
+      list-style: none; /* hilangkan bullet default */
+      padding-left: 0;
+    }
+
+    ul.noncheck li {
+      position: relative;
+      padding-left: 30px; /* beri ruang untuk gambar */
+    }
+
+    ul.noncheck li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 5px;
+      width: 20px;   /* ukuran gambar */
+      height: 20px;
+      background-image: url("list.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+<body class="">
+
+  <!-- Navbar -->
+  <div class="navbar navbar-expand-lg ">
+    <div class="container-narrow d-flex align-items-center gap-4 flex-wrap w-100">
+
+      <a href="">
+        <img src="forge.png" alt="" style="height: 45px; width: 45px;">
+      </a>
+
+      <form class="input-group search-group">
+        <span class="input-group-text">
+          <i class="bi bi-search"></i>
+        </span>
+        <input type="text" class="form-control" placeholder="Search..." aria-label="Search">
+      </form>
+
+      <!-- Centered navigation links -->
+      <div class="nav-center">
+        <ul class="navbar-nav flex-row gap-3">
+          <li><a class="dropdown-item text-light" href="account-server.html">My Account</a></li>
+          <li><a class="dropdown-item text-light" href="API-forge.html">API Tokens</a></li>
+          <li><a class="dropdown-item text-light" href="circels-forge.html">Circles</a></li>
+          <li><a class="dropdown-item text-light" href="billing-forge.html">Billing</a></li>
+          <hr>
+          <li><a class="dropdown-item text-light" href="#">Documentation</a></li>
+          <li><a class="dropdown-item text-light" href="#">Vidio Tutorials</a></li>
+          <li><a class="dropdown-item text-light" href="#">Blog</a></li>
+          <hr>
+          <li><a class="dropdown-item text-light" href="forge-intro.html">Logout</a></li>
+        </ul>
+      </div>
+
+      <div class="dropdown">
+        <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          admin
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end bg-dark">
+          <li><a class="dropdown-item text-light" href="#">Profile</a></li>
+          <li><a class="dropdown-item text-light" href="#">Logout</a></li>
+          <li><a class="dropdown-item text-light" href="#">Profile</a></li>
+          <li><a class="dropdown-item text-light" href="#">Logout</a></li>
+          <hr>
+          <li><a class="dropdown-item text-light" href="#">Logout</a></li>
+          <li><a class="dropdown-item text-light" href="#">Profile</a></li>
+          <li><a class="dropdown-item text-light" href="#">Logout</a></li>
+          <hr>
+          <li><a class="dropdown-item text-light" href="#">Logout</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+  <div class="container py-5">
+<div class="container pb-5" id="harga">
+    <h2 class="text-center text-success fw-bold mb-4">Subscription Plans</h2>
+    <div class="d-flex justify-content-center align-items-center mb-3">
+        <span class="me-2 fw-bold">Monthly</span>
+        <div class="form-check form-switch">
+            <input class="form-check-input bg-success border-success" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+        </div>
+        <span class="ms-2 fw-bold">Yearly</span>
+    </div>
+    <div class="row g-7">
+        <!-- Hobby Plan -->
+        <div class="col-md-4 d-flex">
+            <div class="p-4 shadow-sm border-0 text-center card-dark rounded">
+                <h5 class="fw-bold">Hobby</h5>
+                <h4 class="fw-bold text-light price" data-monthly="12" data-yearly="120">
+                    $<span class="amount">12</span> 
+                    <span class="text-secondary fs-6 fw-semibold duration">/month</span>
+                </h4>
+                <p class="text-secondary fs-6">The essentials to provide your best work for clients.</p>
+                <ul class="check text-start mb-0 p-0">
+                    <li>One Server</li>
+                    <li>Unlimited Sites</li>
+                    <li>Unlimited Deployments</li>
+                    <li>Push To Deploy</li>
+                    <li>Basic Support</li>
+                </ul>
+                <ul class="noncheck text-start mb-0 p-0">
+                    <li>Share Servers With Teammates</li>
+                    <li>Database Backups</li>
+                    <li>Server Monitoring</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Growth Plan -->
+        <div class="col-md-4 d-flex">
+            <div class="p-4 shadow-sm border-0 text-center card-dark rounded">
+                <h5 class="fw-bold">Growth</h5>
+                <h4 class="fw-bold text-light price" data-monthly="19" data-yearly="190">
+                    $<span class="amount">19</span> 
+                    <span class="text-secondary fs-6 fw-semibold duration">/month</span>
+                </h4>
+                <p class="text-secondary fs-6">A plan that scales with your rapidly growing business.</p>
+                <ul class="check text-start mb-0 p-0">
+                    <li><b>Unlimited</b> Server</li>
+                    <li>Unlimited Sites</li>
+                    <li>Unlimited Deployments</li>
+                    <li>Push To Deploy</li>
+                    <li>Basic Support</li>
+                </ul>
+                <ul class="noncheck text-start mb-0 p-0">
+                    <li>Share Servers With Teammates</li>
+                    <li>Database Backups</li>
+                    <li>Server Monitoring</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Businesses Plan -->
+        <div class="col-md-4 d-flex">
+            <div class="p-4 shadow-sm border-0 text-center card-dark rounded">
+                <h5 class="fw-bold">Businesses</h5>
+                <h4 class="fw-bold text-light price" data-monthly="39" data-yearly="390">
+                    $<span class="amount">39</span> 
+                    <span class="text-secondary fs-6 fw-semibold duration">/month</span>
+                </h4>
+                <p class="text-secondary fs-6">Dedicated support and infrastructure for your company.</p>
+                <ul class="check text-start mb-0 p-0">
+                    <li><b>Unlimited</b> Server</li>
+                    <li>Unlimited Sites</li>
+                    <li>Unlimited Deployments</li>
+                    <li>Push To Deploy</li>
+                    <li><b>Priority</b> Support</li>
+                    <li>Share Servers With Teammates</li>
+                    <li>Database Backups</li>
+                    <li>Server Monitoring</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <center>
+        <a href="forge-register.html" class="badge bg-success text-white fw-semibold fs-4">Start a free trial</a>
+        <p class="text-secondary pt-3">All prices are in USD. Server provider costs not included.</p>
+    </center>
+</div>
+
+<!-- Script untuk toggle harga -->
+<script>
+document.getElementById('flexSwitchCheckDefault').addEventListener('change', function() {
+    const yearly = this.checked;
+    const prices = document.querySelectorAll('.price');
+
+    prices.forEach(price => {
+        const monthlyPrice = price.getAttribute('data-monthly');
+        const yearlyPrice = price.getAttribute('data-yearly');
+
+        price.querySelector('.amount').textContent = yearly ? yearlyPrice : monthlyPrice;
+        price.querySelector('.duration').textContent = yearly ? '/year' : '/month';
+    });
+});
+</script>
+</body>
+</html>
